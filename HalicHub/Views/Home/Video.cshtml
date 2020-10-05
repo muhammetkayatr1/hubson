@@ -1,0 +1,50 @@
+﻿@model VideoListViewModel
+@await Html.PartialAsync("_Header")
+<section class="videos spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="videos__large__item set-bg" data-setbg="img6/videos/large-item.jpg">
+                    <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                    <div class="videos__large__item__text">
+                        <h4>
+                            Martin Garrix & Pierce Fulton feat. Mike Shinoda - Waiting For Tomorrow (Official Video)
+                        </h4>
+                        <ul>
+                            <li>20 Ocak 2020</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="videos__slider owl-carousel">
+                        @foreach (var item in Model.Videos)
+                        {
+                            @await Html.PartialAsync("_VideoList", item)}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+
+                    <div class="modal-body">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <!-- 16:9 aspect ratio -->
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@await Html.PartialAsync("_Footer")

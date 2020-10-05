@@ -1,0 +1,57 @@
+﻿@model AuthorDetailModel
+@await Html.PartialAsync("_Header")
+<section style="padding-bottom: 0px ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div>
+                    <h3 style="font-weight: 700;"><a href="#">@Model.Authors.NameSurname</a></h3>
+                    <div class="color-div">
+                        <div class="color-blue" style="background-color:#2167B0;height:0.5rem;"></div>
+                        <div class="color-orange" style="background-color:#ED6425;height:0.5rem;"></div>
+                        <div class="color-pink" style="background-color:#DE2763;height:0.5rem;"></div>
+                    </div>
+                    <br>
+                    <p>@Model.Authors.Description</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img style="border-radius: 200px; float: right" src="@Model.Authors.Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="listing-area pt-120 pb-120">
+    <div class="container">
+        <h3 style="font-weight: 700; border-bottom: solid black 1px; margin-bottom: 50px"><a href="#">Yazara ait yazılar</a></h3>
+        <div class="row">
+            <div class="col-xl-12 col-lg-8 col-md-6">
+                <div class="popular-directorya-area fix">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="properties pb-20">
+                                <div class="properties__card">
+                                    <div class="properties__img overlay1">
+                                        <a href="#"><img src="img/case_study/2.png" alt=""></a>
+                                        <div class="icon">
+                                            <h3 style="font-size: 1em; padding: 5px; background: #07233d; color: white; border-radius: 8px">Kategori</h3>
+                                        </div>
+                                    </div>
+                                    <div class="properties__caption">
+                                        <h3 style="font-weight: 700"><a href="#">Introduction to Wordpress 5.0</a></h3>
+                                        <p>
+                                            A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a
+                                            paradisematic country, in which roasted parts of sentences...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@await Html.PartialAsync("_Footer")

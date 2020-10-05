@@ -1,0 +1,14 @@
+﻿@model Activities
+
+<div class="single_study text-center">
+    <div class="thumb" style="display: block">
+        <a style="display: block" asp-controller="home" asp-action="ActivitiesDetails" asp-route-Detail="@Model.Url">
+            <img src="@Model.img" alt="">
+        </a>
+    </div>
+    <div class="subheading">
+        <h4><a asp-controller="home" asp-action="ActivitiesDetails" asp-route-Detail="@Model.Url">@Model.Tittle</a></h4>
+        <p style="padding-left: 20px; padding-right: 20px">@Model.Description</p>
+    </div>
+</div>
+           

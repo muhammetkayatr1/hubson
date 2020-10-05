@@ -1,0 +1,30 @@
+﻿@model ActivitiesListViewModel
+<div class="case_study_area case_bg_1">
+    <div class="patrn_1 d-none d-lg-block">
+        <img src="img/patrn_1.png" alt="">
+    </div>
+    <div class="patrn_2 d-none d-lg-block">
+        <img src="img/patrn.png" alt="">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title text-center mb-95 white_text">
+                    <h3>Etkinlikler</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="case_active owl-carousel">
+
+                    @foreach (var item in Model.activities)
+                    {
+        @await Html.PartialAsync("_Activities", item)}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
